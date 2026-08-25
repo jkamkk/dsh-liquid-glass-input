@@ -47,6 +47,24 @@ Ordinary frost just smears the background; this tries to let it pass through a p
 **按住拖动 Drag-stretch**——按住不放再移动，玻璃会先跟着手走一小段，像被拽着的软胶体；同时顺着移动方向被拉长、垂直方向被压扁，速度越快形变越明显。松手后位移和形状一起弹回原状。「跟着手走」的距离和「拉伸」的幅度各有滑杆可调。
 **Drag-stretch** — hold and move: the glass trails your pointer for a short distance like pulled soft jelly, stretching along the motion and squashing sideways; the faster you move, the stronger the deformation. On release, position and shape spring back together. Trail distance and stretch amount each have their own slider.
 
+## 性能与开销 / Performance
+
+静止时插件不做逐帧工作：弹簧循环只在按压、拖拽和回弹过程中运行，参数落定后自动停止。
+At rest the plugin does no per-frame work: the spring loop runs only during press, drag and settle-back, and stops itself once the values converge.
+
+三张映射图在启动时用 Canvas 合成一次，之后整个折射效果驻留在一个常驻 SVG 滤镜里——动画过程只改滤镜的一个数值，不重建滤镜拓扑。
+The three maps are composited once on a canvas at startup; refraction then lives inside one persistent SVG filter, and animation only rewrites a single filter value instead of rebuilding anything.
+
+主要开销有三处，都与卡片面积成正比。若在低性能设备上感到卡顿，可优先关闭磨砂模糊，其次逐层关掉放大/折射：
+There are three main costs, each scaling with card area. If the card feels laggy on weaker hardware, switch off frost blur first, then the magnify/refract layers one by one:
+
+- 磨砂模糊——backdrop-filter 高斯模糊，最贵的一层
+- Frost blur — a backdrop-filter gaussian, by far the heaviest layer
+- 折射与放大——边缘的位移图采样
+- Refraction & magnify — displacement-map sampling along the edges
+- 按压/拖动期间的 transform 与阴影刷新——requestAnimationFrame 驱动，仅交互期间存在
+- Transform & shadow refreshes while pressing or dragging — requestAnimationFrame-driven, interaction-only
+
 ## 安装 / Install
 
 ```
@@ -60,8 +78,8 @@ For local development you can install from a directory instead:
 dsh plugin --profile web add <本目录>
 ```
 
-安装后重启 DSH Web GUI 生效。设置界面目前为中文，多语言支持在路上。
-Restart the DSH Web GUI afterwards. The settings panel is currently Chinese-only; localization is on the way.
+安装后重启 DSH Web GUI 生效。设置界面按浏览器语言自动切换中文/英文；所有设置保存在 DSH 主机目录（~/.dsh）下，换浏览器无需重调。
+Restart the DSH Web GUI afterwards. The settings panel switches between Chinese and English automatically based on browser language; settings are stored on the DSH host (~/.dsh), so they survive browser switches.
 
 位移图来源：https://kube.io/blog/liquid-glass-css-svg （版权归原作者，仅限个人学习使用）
 Displacement maps come from https://kube.io/blog/liquid-glass-css-svg (all rights with the original author; for personal study only).
