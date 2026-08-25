@@ -20,8 +20,8 @@
 给 DSH Web GUI 输入卡加 kube.io「Magnifying Glass」液态玻璃折射效果：
 Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input card of the DSH Web GUI:
 
-- 官方位移图/高光图/放大图，端头等比缩放贴合四角，中段平铺补线；Canvas 预合成，单个 SVG 滤镜内十余个原语
-- Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, a dozen-odd primitives inside one persistent filter
+- 官方位移图/高光图/放大图，端头等比缩放贴合四角，中段平铺补线；Canvas 预合成，滤镜内约 11 原语
+- Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, about eleven filter primitives in total
 - 按压动画：原版 9 弹簧系统逐参数复刻（rAF 积分，transform/阴影/滤镜缩放全耦合）
 - Press animation faithfully rebuilt from the original nine-spring system (rAF-integrated, with transform, shadow and filter scale all coupled)
 - 点击处柔和高光（设置里可关）、动画速度滑杆（设置里可调）
@@ -70,6 +70,9 @@ There are three main costs, each scaling with card area. If the card feels laggy
 - Refraction & magnify — displacement-map sampling along the edges
 - 按压/拖动期间的 transform 与阴影刷新——requestAnimationFrame 驱动，仅交互期间存在
 - Transform & shadow refreshes while pressing or dragging — requestAnimationFrame-driven, interaction-only
+
+折射边缘的细微锯齿来自 SVG 位移滤镜的逐像素采样机制，是该技术的固有限制（原版演示同样存在），开启磨砂模糊可明显缓解。
+The fine stair-stepping along refracted edges comes from the per-pixel sampling of SVG displacement filters and is inherent to the technique (the original demo shows it too); enabling frost blur masks it considerably.
 
 ## 安装 / Install
 
