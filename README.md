@@ -7,7 +7,23 @@
 - 点击处柔和高光（设置里可关）、动画速度滑杆（设置里可调）
 - 仅 Chromium 系浏览器可见折射
 
-安装（一键）：
+## 效果预览
+
+![演示动画](assets/demo.webp)
+
+| 浅色壁纸 | 暗色壁纸 |
+| --- | --- |
+| ![浅色](assets/preview-light.png) | ![暗色](assets/preview-dark.png) |
+
+> 折射效果仅 Chromium 系浏览器可见；动图为录屏压缩版，实际效果以实机为准。
+
+## 安装
+
+一键安装：
+
+```
+dsh plugin add https://github.com/jkamkk/dsh-liquid-glass-input
+```
 
 ```
 dsh plugin add https://github.com/jkamkk/dsh-liquid-glass-input
