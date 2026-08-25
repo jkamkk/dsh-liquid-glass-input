@@ -6,6 +6,17 @@
 > 折射效果依赖 SVG 位移滤镜：Firefox、Safari 下看不到折射与放大，其余功能不受影响。
 > Refraction relies on SVG displacement filters: in Firefox and Safari the glass renders without refraction or magnification — everything else works.
 
+## 效果预览 / Preview
+
+![演示动画](assets/demo.webp)
+
+| 浅色模式效果 | 暗色模式效果 |
+| --- | --- |
+| ![浅色效果](assets/preview-light.png)<br>浅色 Light | ![暗色效果](assets/preview-dark.png)<br>暗色 Dark |
+
+> 动图为录屏压缩版，实际效果以实机为准。
+> The clip above is a compressed screen recording; the live effect looks better.
+
 给 DSH Web GUI 输入卡加 kube.io「Magnifying Glass」液态玻璃折射效果：
 Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input card of the DSH Web GUI:
 
@@ -17,17 +28,6 @@ Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input ca
 - Soft glow at the click point (can be turned off) and an animation-speed slider, both in settings
 - 仅 Chromium 系浏览器可见折射
 - Refraction is visible only in Chromium-based browsers
-
-## 效果预览 / Preview
-
-![演示动画](assets/demo.webp)
-
-| 浅色模式效果 | 暗色模式效果 |
-| --- | --- |
-| ![浅色效果](assets/preview-light.png)<br>浅色 Light | ![暗色效果](assets/preview-dark.png)<br>暗色 Dark |
-
-> 折射效果仅 Chromium 系浏览器可见；动图为录屏压缩版，实际效果以实机为准。
-> Refraction appears only in Chromium-based browsers. The clip above is a compressed screen recording; the live effect looks better.
 
 ## 玻璃的层次 / Layers of the glass
 
