@@ -20,8 +20,8 @@
 给 DSH Web GUI 输入卡加 kube.io「Magnifying Glass」液态玻璃折射效果：
 Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input card of the DSH Web GUI:
 
-- 官方位移图/高光图/放大图，端头等比缩放贴合四角，中段平铺补线；Canvas 预合成，滤镜内约 11 原语
-- Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, about eleven filter primitives in total
+- 官方位移图/高光图/放大图，端头等比缩放贴合四角，中段平铺补线；Canvas 预合成，单个 SVG 滤镜内十余个原语
+- Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, a dozen-odd primitives inside one persistent filter
 - 按压动画：原版 9 弹簧系统逐参数复刻（rAF 积分，transform/阴影/滤镜缩放全耦合）
 - Press animation faithfully rebuilt from the original nine-spring system (rAF-integrated, with transform, shadow and filter scale all coupled)
 - 点击处柔和高光（设置里可关）、动画速度滑杆（设置里可调）
