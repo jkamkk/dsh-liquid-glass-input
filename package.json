@@ -1,7 +1,7 @@
 {
   "name": "dsh-liquid-glass-input",
   "description": "Liquid Glass input card for the dsh web GUI - kube.io Magnifying Glass SVG refraction on the composer card with a springy press effect",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
