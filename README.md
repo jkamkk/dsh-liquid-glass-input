@@ -7,6 +7,12 @@
 - 点击处柔和高光（设置里可关）、动画速度滑杆（设置里可调）
 - 仅 Chromium 系浏览器可见折射
 
-安装：`dsh plugin --profile web add <本目录>`，然后重启 web。
+安装（一键）：
+
+```
+dsh plugin add https://github.com/jkamkk/dsh-liquid-glass-input
+```
+
+安装后重启 DSH Web GUI 生效。
 
 位移图来源：https://kube.io/blog/liquid-glass-css-svg （版权归原作者，仅限个人学习使用）
