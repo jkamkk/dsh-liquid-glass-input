@@ -11,22 +11,22 @@
 
 ![演示动画](assets/demo.webp)
 
-| 浅色壁纸 | 暗色壁纸 |
+| 浅色模式效果 | 暗色模式效果 |
 | --- | --- |
-| ![浅色](assets/preview-light.png) | ![暗色](assets/preview-dark.png) |
+| ![浅色效果](assets/preview-light.png) | ![暗色效果](assets/preview-dark.png) |
 
 > 折射效果仅 Chromium 系浏览器可见；动图为录屏压缩版，实际效果以实机为准。
 
 ## 安装
 
-一键安装：
-
 ```
-dsh plugin add https://github.com/jkamkk/dsh-liquid-glass-input
+dsh plugin add github:jkamkk/dsh-liquid-glass-input
 ```
 
+本地开发调试可从目录安装：
+
 ```
-dsh plugin add https://github.com/jkamkk/dsh-liquid-glass-input
+dsh plugin --profile web add <本目录>
 ```
 
 安装后重启 DSH Web GUI 生效。
