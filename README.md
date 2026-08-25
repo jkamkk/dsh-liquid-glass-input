@@ -71,8 +71,8 @@ There are three main costs, each scaling with card area. If the card feels laggy
 - 按压/拖动期间的 transform 与阴影刷新——requestAnimationFrame 驱动，仅交互期间存在
 - Transform & shadow refreshes while pressing or dragging — requestAnimationFrame-driven, interaction-only
 
-折射边缘的细微锯齿来自 SVG 位移滤镜的逐像素采样机制，是该技术的固有限制（原版演示同样存在），开启磨砂模糊可明显缓解；实测关闭放大层后锯齿只剩边缘折射处的一点残迹，对锯齿敏感也可将放大层一并关闭。
-The fine stair-stepping along refracted edges comes from the per-pixel sampling of SVG displacement filters and is inherent to the technique (the original demo shows it too); enabling frost blur masks it considerably; with the magnify layer switched off only a faint trace remains at the edges.
+折射边缘的细微锯齿来自 SVG 位移滤镜的逐像素采样机制，是该技术的固有限制（原版演示同样存在），开启磨砂模糊可明显缓解。
+The fine stair-stepping along refracted edges comes from the per-pixel sampling of SVG displacement filters and is inherent to the technique (the original demo shows it too); enabling frost blur masks it considerably.
 
 ## 安装 / Install
 
@@ -92,8 +92,3 @@ Restart the DSH Web GUI afterwards. The settings panel switches between Chinese 
 
 位移图来源：https://kube.io/blog/liquid-glass-css-svg （版权归原作者，仅限个人学习使用）
 Displacement maps come from https://kube.io/blog/liquid-glass-css-svg (all rights with the original author; for personal study only).
-
-## 关于 WebGL 路线的尝试
-
-v1.18 曾试验用 WebGL 着色器替代 SVG 滤镜来消除锯齿（v1.19 已移除）。放弃原因：浏览器没有提供读取元素身后真实像素的 API——backdrop-filter 能拿到背景是浏览器的特权行为，WebGL 只能看到你自己上传的纹理，等于要自己重画整个背景，成本不可接受。
-In v1.18 a WebGL shader path was tried to remove the jaggies (removed in v1.19). It was abandoned because browsers provide no way to read the real pixels behind an element: backdrop-filter gets the backdrop as a browser privilege, while WebGL only sees textures you supply yourself, so the entire background would have to be redrawn manually.
