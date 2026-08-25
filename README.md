@@ -104,16 +104,3 @@ Refraction jaggies are inherent to SVG displacement filters (see above). To work
 
 因此 v1 路线维持不变：SVG 位移滤镜是目前唯一能让页面免费拿到真实背景内容的架构，锯齿是其已知代价。
 The v1 approach therefore stays: SVG displacement filtering remains the only architecture that lets a page use the real backdrop for free; stair-stepping along edges is its known price.
-
-
-## 关于 WebGL 路线的尝试 / About the attempted WebGL path
-
-折射边缘的锯齿是 SVG 位移滤镜的固有限制（见上文）。为了绕开它，v1.18 曾实现过一条 WebGL 着色器渲染路径，在真机上验证后在 v1.19 移除。结论：以现有浏览器能力，这条路走不通，原因有三：
-Refraction jaggies are inherent to SVG displacement filters (see above). To work around them, v1.18 briefly shipped a WebGL shader rendering path, verified on real hardware and removed in v1.19. Conclusion: within current browser capabilities this path is a dead end, for three reasons:
-
-1. **浏览器不提供读取真实背景的 API / No API for the real backdrop.** backdrop-filter 是浏览器特权操作——页面只声明滤镜，背后的实际像素由合成器私下处理。WebGL 只能读取你自己上传的纹理，没有任何接口能拿到元素身后已合成的画面。/ backdrop-filter is a privileged browser operation: the page declares a filter and the compositor handles the pixels privately. WebGL can only read textures you upload yourself; there is no way to obtain the composited picture behind an element.
-2. **聊天内容无法实时重建 / Live chat cannot be rebuilt in real time.** 壁纸（video/img）可以直接绘制进纹理，成本极低；但聊天气泡是活的 DOM，逐帧光栅化需要克隆子树、内联全部样式并经 foreignObject 重渲染——实测在真实对话页面上每帧耗时以秒计，且阻塞主线程导致整个界面失去响应。/ The wallpaper (video/img) can be drawn into a texture cheaply, but chat bubbles are live DOM: rasterizing them per frame requires cloning the subtree, inlining all styles and re-rendering through foreignObject, measured in seconds per frame on a real conversation page, freezing the whole UI.
-3. **对齐维护成本高 / Alignment is a moving target.** 画布内容与真实卡片之间隔着动画、缩放、DPR 等多套坐标系统，快照与实机稍有偏差就会肉眼可见地错位。/ Keeping the canvas aligned with the live card across animations, scaling and device pixel ratios is a continuous burden; any drift is immediately visible.
-
-因此 v1 路线维持不变：SVG 位移滤镜是目前唯一能让页面免费拿到真实背景内容的架构，锯齿是其已知代价。
-The v1 approach therefore stays: SVG displacement filtering remains the only architecture that lets a page use the real backdrop for free; stair-stepping along edges is its known price.
