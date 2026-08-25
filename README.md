@@ -1,54 +1,67 @@
 # dsh-liquid-glass-input
 
 给 DSH Web GUI 输入卡加 kube.io「Magnifying Glass」液态玻璃折射效果：
+Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input card of the DSH Web GUI:
 
 - 官方位移图/高光图/放大图，端头等比缩放贴合四角，中段平铺补线；Canvas 预合成，滤镜内约 11 原语
-- 按压动画：原版 9 弹簧系统逐参数复刻（rAF 积分，transform/阴影/滤镜 scale 全耦合）
+- Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, about eleven filter primitives in total
+- 按压动画：原版 9 弹簧系统逐参数复刻（rAF 积分，transform/阴影/滤镜缩放全耦合）
+- Press animation faithfully rebuilt from the original nine-spring system (rAF-integrated, with transform, shadow and filter scale all coupled)
 - 点击处柔和高光（设置里可关）、动画速度滑杆（设置里可调）
+- Soft glow at the click point (can be turned off) and an animation-speed slider, both in settings
 - 仅 Chromium 系浏览器可见折射
+- Refraction is visible only in Chromium-based browsers
 
-## 效果预览
+## 效果预览 / Preview
 
 ![演示动画](assets/demo.webp)
 
 | 浅色模式效果 | 暗色模式效果 |
 | --- | --- |
-| ![浅色效果](assets/preview-light.png) | ![暗色效果](assets/preview-dark.png) |
+| ![浅色效果](assets/preview-light.png)<br>浅色 Light | ![暗色效果](assets/preview-dark.png)<br>暗色 Dark |
 
 > 折射效果仅 Chromium 系浏览器可见；动图为录屏压缩版，实际效果以实机为准。
+> Refraction appears only in Chromium-based browsers. The clip above is a compressed screen recording; the live effect looks better.
 
-## 玻璃的层次
+## 玻璃的层次 / Layers of the glass
 
-常见的「液态玻璃」皮肤只是把背景糊掉一层：透过卡片什么都看不真切，边缘也没有任何变化。这里把玻璃拆成了四个层次，各有各的观感：
+常见的「液态玻璃」皮肤只是把背景糊掉一层：透过卡片什么都看不真切，边缘也没有任何变化。这里把玻璃拆成了五个层次，各有各的观感：
+Most so-called "liquid glass" skins simply blur whatever sits behind the card: everything behind turns into mush and the edge does nothing optical. Here the glass is split into five layers, each with its own look:
 
-| 层 | 观感 |
+| 层 Layer | 观感 What you see |
 | --- | --- |
-| 放大 | 贴近边缘的背景被微微放大，像隔着玻璃加厚的棱边看东西 |
-| 折射 | 直线走到卡片边缘会弯一下、收一下，如同光线穿过有厚度的玻璃改了方向 |
-| 高光 | 棱线上有一道随按压流动的亮边 |
-| 磨砂 | 底下垫着一层雾面，托住上面三层，浓淡可调 |
-| 色散 | 折射时红、绿、蓝三个颜色通道的偏移量略有差别，棱边上留下一线细细的彩虹边（色差） |
+| 放大 Magnify | 贴近边缘的背景被微微放大，像隔着玻璃加厚的棱边看东西<br>The background right inside the rim is slightly magnified, as if seen through the thickened edge of real glass |
+| 折射 Refract | 直线走到卡片边缘会弯一下、收一下，如同光线穿过有厚度的玻璃改了方向<br>Straight lines bend and pinch inward as they reach the card's edge, the way light changes direction passing through thick glass |
+| 高光 Specular | 棱线上有一道随按压流动的亮边<br>A bright rim along the edges that shifts while you press |
+| 磨砂 Frost | 底下垫着一层雾面，托住上面三层，浓淡可调<br>A frosted veil underneath that carries the other layers; its strength is adjustable |
+| 色散 Dispersion | 折射时红、绿、蓝三个颜色通道的偏移量略有差别，棱边上留下一线细细的彩虹边（色差）<br>The three color channels refract by slightly different amounts, leaving a thin rainbow fringe along the edge (chromatic aberration) |
 
 普通磨砂是把背景「糊掉」，这里是想让背景「穿过」一块有厚度的玻璃。各层都能在设置里单独开关、调强弱、一键回到默认。
+Ordinary frost just smears the background; this tries to let it pass through a piece of glass that has actual thickness. Every layer can be toggled, tuned or reset to default separately in the settings.
 
-## 两种动画
+## 两种动画 / Two animations
 
-**按压**——按下卡片时它向外微微鼓起、阴影随之收拢，松手沿弹簧曲线荡两下回到原位；点击的位置会同时泛开一小片柔光，不想要可以在设置里关掉。
+**按压 Press**——按下卡片时它向外微微鼓起、阴影随之收拢，松手沿弹簧曲线荡两下回到原位；点击的位置会同时泛开一小片柔光，不想要可以在设置里关掉。
+**Press** — pressing gently bulges the card outward while its shadow pulls in; on release it settles back with a springy wobble. A soft glow also blooms at the exact spot you clicked, which can be switched off in settings.
 
-**按住拖动**——按住不放再移动，玻璃会先跟着手走一小段，像被拽着的软胶体；同时顺着移动方向被拉长、垂直方向被压扁，速度越快形变越明显。松手后位移和形状一起弹回原状。「跟着手走」的距离和「拉伸」的幅度各有滑杆可调。
+**按住拖动 Drag-stretch**——按住不放再移动，玻璃会先跟着手走一小段，像被拽着的软胶体；同时顺着移动方向被拉长、垂直方向被压扁，速度越快形变越明显。松手后位移和形状一起弹回原状。「跟着手走」的距离和「拉伸」的幅度各有滑杆可调。
+**Drag-stretch** — hold and move: the glass trails your pointer for a short distance like pulled soft jelly, stretching along the motion and squashing sideways; the faster you move, the stronger the deformation. On release, position and shape spring back together. Trail distance and stretch amount each have their own slider.
 
-## 安装
+## 安装 / Install
 
 ```
 dsh plugin add github:jkamkk/dsh-liquid-glass-input
 ```
 
 本地开发调试可从目录安装：
+For local development you can install from a directory instead:
 
 ```
 dsh plugin --profile web add <本目录>
 ```
 
-安装后重启 DSH Web GUI 生效。
+安装后重启 DSH Web GUI 生效。设置界面目前为中文，多语言支持在路上。
+Restart the DSH Web GUI afterwards. The settings panel is currently Chinese-only; localization is on the way.
 
 位移图来源：https://kube.io/blog/liquid-glass-css-svg （版权归原作者，仅限个人学习使用）
+Displacement maps come from https://kube.io/blog/liquid-glass-css-svg (all rights with the original author; for personal study only).
