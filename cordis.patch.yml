@@ -1,0 +1,4 @@
+# liquid-glass-input bundle patch: inserts its row into the web plugin roster.
+- insert:
+    - id: ui-liquid-glass
+      name: 'dsh-liquid-glass-input'
