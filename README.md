@@ -69,7 +69,7 @@ That is why this is only the input card, not a full theme: spreading the same gl
 ## 安装 / Install
 
 ```
-dsh plugin add github:jkamkk/dsh-liquid-glass-input
+dsh plugin --profile web add github:jkamkk/dsh-liquid-glass-input
 ```
 
 本地开发调试可从目录安装：
