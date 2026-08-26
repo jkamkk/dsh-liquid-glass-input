@@ -24,8 +24,8 @@ Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input ca
 - Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, about eleven filter primitives in total
 - 按压动画：原版 9 弹簧系统逐参数复刻（rAF 积分，transform/阴影/滤镜缩放全耦合）
 - Press animation faithfully rebuilt from the original nine-spring system (rAF-integrated, with transform, shadow and filter scale all coupled)
-- 点击像素增艳：按住时直接提升玻璃背景像素的饱和度/亮度，不叠白色遮罩（设置里可关，倍率滑杆可调）、动画速度滑杆（设置里可调）
-- Click pixel boost: while pressing, the backdrop pixels' saturation/brightness are boosted directly instead of layering a white overlay (switchable in settings, with multiplier sliders) plus an animation-speed slider
+- 点击像素增艳：按住时在指针位置直接提升玻璃背景像素的饱和度/亮度（径向蒙版限定区域，不叠白色遮罩；设置里可关，强度与范围滑杆可调）、动画速度滑杆（设置里可调）
+- Click pixel boost: while pressing, the backdrop pixels' saturation/brightness are boosted directly at the pointer via a radial mask inside the SVG filter (no white overlay; switchable in settings with strength and size sliders) plus an animation-speed slider
 - 仅 Chromium 系浏览器可见折射
 - Refraction is visible only in Chromium-based browsers
 
