@@ -1,7 +1,7 @@
 # dsh-liquid-glass-input
 
 > [!WARNING]
-> **⚠️ 仅支持 Chromium 内核浏览器（Chrome / Edge 等）/ Chromium-based browsers only**
+> **仅支持 Chromium 内核浏览器（Chrome / Edge 等）/ Chromium-based browsers only**
 >
 > 折射效果依赖 SVG 位移滤镜：Firefox、Safari 下看不到折射与放大，其余功能不受影响。
 > Refraction relies on SVG displacement filters: in Firefox and Safari the glass renders without refraction or magnification — everything else works.
