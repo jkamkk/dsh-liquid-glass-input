@@ -10,12 +10,12 @@
 
 ![演示动画](assets/demo.webp)
 
+> 动图为录屏压缩版，实际效果以实机为准。点击处那圈白光是旧效果：现在按住时，指针附近透过玻璃看到的景色会变浓、变亮，不再叠一层白色遮罩。
+> The clip is a compressed recording; the live effect looks better. The white glow at the click is the old look — pressing now makes the view through the glass richer and brighter around the pointer, with no white overlay.
+
 | 浅色模式效果 | 暗色模式效果 |
 | --- | --- |
 | ![浅色效果](assets/preview-light.png)<br>浅色 Light | ![暗色效果](assets/preview-dark.png)<br>暗色 Dark |
-
-> 动图为录屏压缩版，实际效果以实机为准。
-> The clip above is a compressed screen recording; the live effect looks better.
 
 <img src="assets/preview-settings.png" width="420" alt="设置页">
 
@@ -52,8 +52,8 @@ Ordinary frost just smears the background; this tries to let it pass through a p
 
 ## 两种动画 / Two animations
 
-**按压 Press**——按下卡片时它向外微微鼓起、阴影随之收拢，松手沿弹簧曲线荡两下回到原位；点击的位置会同时泛开一小片柔光，不想要可以在设置里关掉。
-**Press** — pressing gently bulges the card outward while its shadow pulls in; on release it settles back with a springy wobble. A soft glow also blooms at the exact spot you clicked, which can be switched off in settings.
+**按压 Press**——按下卡片时它向外微微鼓起、阴影随之收拢，松手沿弹簧曲线荡两下回到原位；指针附近透过玻璃看到的景色会变浓、变亮，不想要可以在设置里关掉。
+**Press** — pressing gently bulges the card outward while its shadow pulls in; on release it settles back with a springy wobble. The view through the glass grows richer and brighter around the pointer, which can be switched off in settings.
 
 **按住拖动 Drag-stretch**——按住不放再移动，玻璃会先跟着手走一小段，像被拽着的软胶体；同时顺着移动方向被拉长、垂直方向被压扁，速度越快形变越明显。松手后位移和形状一起弹回原状。「跟着手走」的距离和「拉伸」的幅度各有滑杆可调。
 **Drag-stretch** — hold and move: the glass trails your pointer for a short distance like pulled soft jelly, stretching along the motion and squashing sideways; the faster you move, the stronger the deformation. On release, position and shape spring back together. Trail distance and stretch amount each have their own slider.
