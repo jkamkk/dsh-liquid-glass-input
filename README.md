@@ -17,6 +17,11 @@
 > 动图为录屏压缩版，实际效果以实机为准。
 > The clip above is a compressed screen recording; the live effect looks better.
 
+![设置页](assets/preview-settings.png)
+
+设置页可分组调节各层强度与点击动画，滑杆本身也是玻璃质感。
+The settings panel groups per-layer strength and press-animation controls; the sliders themselves use the same glass look.
+
 给 DSH Web GUI 输入卡加 kube.io「Magnifying Glass」液态玻璃折射效果：
 Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input card of the DSH Web GUI:
 
