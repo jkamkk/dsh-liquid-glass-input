@@ -79,6 +79,17 @@ There are three main costs, each scaling with card area. If the card feels laggy
 折射边缘的细微锯齿来自 SVG 位移滤镜的逐像素采样机制，是该技术的固有限制（原版演示同样存在），开启磨砂模糊可明显缓解。
 The fine stair-stepping along refracted edges comes from the per-pixel sampling of SVG displacement filters and is inherent to the technique (the original demo shows it too); enabling frost blur masks it considerably.
 
+## 为什么不做主题 / Why this isn't a theme
+
+这套效果是按「一小块玻璃」来算开销的：铺得越大，机器越累。输入卡面积不大，静止时也不做逐帧计算，所以还能保持流畅。
+The cost is priced for one small piece of glass: the more surface it covers, the harder the machine works. The input card is small, and at rest it does no per-frame work, so it can stay smooth.
+
+做成整套主题的话，侧栏、消息列表、设置面板都要铺上同一层磨砂和折射。那些区域比输入卡大得多，还要跟着页面一起滚，最吃性能的磨砂会一直在画。机器稍弱一点，打字和滚动会先卡。
+As a full theme, the same frost and refraction would sit on the sidebar, the message list and the settings panels. Those areas are much larger than the input card and they scroll with the page, so the heaviest frost layer would be painting all the time. On a weaker machine, typing and scrolling would hitch first.
+
+所以这个插件只改输入卡，外加设置页里几个小控件。大面积换肤交给专门的主题或皮肤，不把这块玻璃贴满整个界面。
+So this plugin only changes the input card, plus a few small controls in the settings panel. Large-area restyling belongs to a dedicated theme or skin; this glass is not meant to cover the whole UI.
+
 ## 安装 / Install
 
 ```
