@@ -88,6 +88,11 @@ dsh plugin --profile web add <本目录>
 安装后重启 DSH Web GUI 生效。设置界面按浏览器语言自动切换中文/英文；所有设置保存在 DSH 主机目录（~/.dsh）下，换浏览器无需重调。
 Restart the DSH Web GUI afterwards. The settings panel switches between Chinese and English automatically based on browser language; settings are stored on the DSH host (~/.dsh), so they survive browser switches.
 
+## 1.32.5
+
+新安装的默认观感对齐作者当前这套：高度 70 固定、上下渐变 36px、下移偏置 0、左右限位 36、工具行下移 8、点击范围 200%、细腻度 100。性能监视默认仍关。
+Fresh installs use the author's current look: 70px fixed height, 36px top/bottom fade, nudge 0, side inset 36, tool-row offset 8, click-glow size 200% and softness 100. The FPS badge stays off by default.
+
 ## 1.32.4
 
 矮卡不再切掉输入文字。权限/模型那一行浮在卡片上，加号和发送仍在两侧中线。长文伸进工具行时上下渐变淡出（范围可调），换行时当前行钉在卡片中线（固定和自适应都是）。工具行可上下微调；侧边按钮那一组的滑杆关掉开关也能拖。
