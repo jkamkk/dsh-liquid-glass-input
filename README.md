@@ -1,5 +1,8 @@
 # dsh-liquid-glass-input
 
+[![dsh.so risk](https://www.dsh.so/badge/dsh-liquid-glass-input.svg)](https://www.dsh.so/artifact/dsh-liquid-glass-input/)
+[![dsh.so install](https://www.dsh.so/badge/install/dsh-liquid-glass-input.svg)](https://www.dsh.so/artifact/dsh-liquid-glass-input/)
+
 > [!WARNING]
 > **仅支持 Chromium 内核浏览器（Chrome / Edge 等）/ Chromium-based browsers only**
 >
