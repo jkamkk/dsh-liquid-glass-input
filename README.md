@@ -8,7 +8,7 @@
 
 ## 效果预览 / Preview
 
-![输入卡演示](assets/demo.webp)
+![输入卡演示](assets/demo-input.webp)
 
 > 动图为录屏压缩版，实际效果以实机为准。
 > The clip is a compressed recording; the live effect looks better.
