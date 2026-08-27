@@ -8,10 +8,12 @@
 
 ## 效果预览 / Preview
 
-![演示动画](assets/demo.webp)
+![输入卡演示](assets/demo.webp)
 
-> 动图为录屏压缩版，实际效果以实机为准。点击处那圈白光是旧效果：现在按住时，指针附近透过玻璃看到的景色会变浓、变亮，不再叠一层白色遮罩。
-> The clip is a compressed recording; the live effect looks better. The white glow at the click is the old look — pressing now makes the view through the glass richer and brighter around the pointer, with no white overlay.
+> 动图为录屏压缩版，实际效果以实机为准。
+> The clip is a compressed recording; the live effect looks better.
+
+![设置页演示](assets/demo-settings.webp)
 
 | 浅色模式效果 | 暗色模式效果 |
 | --- | --- |
