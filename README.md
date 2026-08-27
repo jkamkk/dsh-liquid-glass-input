@@ -10,8 +10,8 @@
 
 ![输入卡演示](assets/demo-input.webp)
 
-> 动图为录屏压缩版，实际效果以实机为准。
-> The clip is a compressed recording; the live effect looks better.
+> 动图为录屏压缩版，实际效果以实机为准。动图中的动态壁纸并非本插件效果，本插件只改变输入卡样式。
+> The clip is a compressed recording; the live effect looks better. The animated wallpaper in the clip is not part of this plugin — it only restyles the input card.
 
 ![设置页演示](assets/demo-settings.webp)
 
