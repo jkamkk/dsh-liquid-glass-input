@@ -1,5 +1,14 @@
 # dsh-liquid-glass-input
 
+[![Awesome DSH Plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+[![dsh plugin](https://img.shields.io/badge/dsh-plugin-4D6BFE?style=flat-square&logo=deepseek&logoColor=white)](https://github.com/deepseek-ai/deepseek-harness)
+[![npm](https://img.shields.io/npm/v/dsh-liquid-glass-input?style=flat-square)](https://www.npmjs.com/package/dsh-liquid-glass-input)
+[![npm downloads](https://img.shields.io/npm/dt/dsh-liquid-glass-input?style=flat-square)](https://www.npmjs.com/package/dsh-liquid-glass-input)
+[![dsh](https://img.shields.io/badge/dsh-%E2%89%A50.1.1--rc-4D6BFE?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
+![platform](https://img.shields.io/badge/platform-web-8A9CF5?style=flat-square)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square)](LICENSE)
+![i18n](https://img.shields.io/badge/i18n-zh%20%7C%20en-success?style=flat-square)
+
 [![dsh.so risk](https://www.dsh.so/badge/dsh-liquid-glass-input.svg)](https://www.dsh.so/artifact/dsh-liquid-glass-input/)
 [![dsh.so install](https://www.dsh.so/badge/install/dsh-liquid-glass-input.svg)](https://www.dsh.so/artifact/dsh-liquid-glass-input/)
 
