@@ -88,5 +88,10 @@ dsh plugin --profile web add <本目录>
 安装后重启 DSH Web GUI 生效。设置界面按浏览器语言自动切换中文/英文；所有设置保存在 DSH 主机目录（~/.dsh）下，换浏览器无需重调。
 Restart the DSH Web GUI afterwards. The settings panel switches between Chinese and English automatically based on browser language; settings are stored on the DSH host (~/.dsh), so they survive browser switches.
 
+## 1.32.4
+
+矮卡不再切掉输入文字。权限/模型那一行浮在卡片上，加号和发送仍在两侧中线。长文伸进工具行时上下渐变淡出（范围可调），换行时当前行钉在卡片中线（固定和自适应都是）。工具行可上下微调；侧边按钮那一组的滑杆关掉开关也能拖。
+A short card no longer clips the input text. The access-mode / model row floats on the card; plus and send stay on the vertical midline. Long text fades at the top and bottom instead of running under the tools (fade range is adjustable). The line you are typing stays on the card midline when it wraps, in both Fixed and Auto height. The tool row can be nudged up or down; the sliders under side-button centering stay editable when that switch is off.
+
 位移图来源：https://kube.io/blog/liquid-glass-css-svg （版权归原作者，仅限个人学习使用）
 Displacement maps come from https://kube.io/blog/liquid-glass-css-svg (all rights with the original author; for personal study only).
