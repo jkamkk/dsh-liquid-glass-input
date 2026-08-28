@@ -1,0 +1,13 @@
+dsh-liquid-glass-input
+Copyright 2026 jkamkk
+
+本仓库中插件自身的源代码按 Apache License 2.0 授权。
+The plugin's own source code in this repository is licensed under Apache-2.0.
+
+本产品包含来自以下来源的第三方素材：
+This product includes third-party materials from:
+
+  https://kube.io/blog/liquid-glass-css-svg
+
+其中位移图、高光图、放大图的版权仍归原作者所有，不在本插件的 Apache-2.0 授权范围内。
+The displacement, specular, and magnifying maps remain copyright of their original author and are not covered by this plugin's Apache-2.0 license.

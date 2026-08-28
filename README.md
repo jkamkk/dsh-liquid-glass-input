@@ -43,8 +43,8 @@ Adds a kube.io "Magnifying Glass" liquid-glass refraction effect to the input ca
 - Official displacement / specular / magnifying maps, corners scaled to fit, edges tiled; maps are pre-composited on canvas, about eleven filter primitives in total
 - 按压动画：原版 9 弹簧系统逐参数复刻（rAF 积分，transform/阴影/滤镜缩放全耦合）
 - Press animation faithfully rebuilt from the original nine-spring system (rAF-integrated, with transform, shadow and filter scale all coupled)
-- 点击像素增艳：按住时在指针位置直接提升玻璃背景像素的饱和度/亮度（径向蒙版限定区域，不叠白色遮罩；设置里可关，强度与范围滑杆可调）、动画速度滑杆（设置里可调）
-- Click pixel boost: while pressing, the backdrop pixels' saturation/brightness are boosted directly at the pointer via a radial mask inside the SVG filter (no white overlay; switchable in settings with strength and size sliders) plus an animation-speed slider
+- 点击像素增艳：按住时指针附近的背景会变浓、变亮（有范围，不是盖一层白；设置里可关），动画速度可调
+- Click pixel boost: while pressing, the backdrop near the pointer grows richer and brighter (a bounded area, not a white overlay; switchable in settings), with an animation-speed slider
 - 仅 Chromium 系浏览器可见折射
 - Refraction is visible only in Chromium-based browsers
 
@@ -61,8 +61,8 @@ Most so-called "liquid glass" skins simply blur whatever sits behind the card: e
 | 磨砂 Frost | 底下垫着一层雾面，托住上面三层，浓淡可调<br>A frosted veil underneath that carries the other layers; its strength is adjustable |
 | 色散 Dispersion | 折射时红、绿、蓝三个颜色通道的偏移量略有差别，棱边上留下一线细细的彩虹边（色差）<br>The three color channels refract by slightly different amounts, leaving a thin rainbow fringe along the edge (chromatic aberration) |
 
-普通磨砂是把背景「糊掉」，这里是想让背景「穿过」一块有厚度的玻璃。各层都能在设置里单独开关、调强弱、一键回到默认。
-Ordinary frost just smears the background; this tries to let it pass through a piece of glass that has actual thickness. Every layer can be toggled, tuned or reset to default separately in the settings.
+普通磨砂是把背景「糊掉」，这里是想让背景「穿过」一块有厚度的玻璃。各层都能在设置里单独开关、调强弱。
+Ordinary frost just smears the background; this tries to let it pass through a piece of glass that has actual thickness. Every layer can be toggled and tuned separately in the settings.
 
 ## 两种动画 / Two animations
 
@@ -102,6 +102,26 @@ dsh plugin --profile web add <本目录>
 安装后重启 DSH Web GUI 生效。设置界面按浏览器语言自动切换中文/英文；所有设置保存在 DSH 主机目录（~/.dsh）下，换浏览器无需重调。
 Restart the DSH Web GUI afterwards. The settings panel switches between Chinese and English automatically based on browser language; settings are stored on the DSH host (~/.dsh), so they survive browser switches.
 
+## 1.32.9
+
+布局不再绑 DSH 的 CSS Module 哈希。滚动层/底板/镜像用官方 `data-*`，加号、发送、工具行等在挂载时打 `data-liq-part`。
+Layout no longer depends on DSH CSS-module hashes. Scroll / backdrop / mirror use official `data-*` attributes; plus, send and the tool row are stamped with `data-liq-part` on attach.
+
+## 1.32.8
+
+README 顶部加上 shields.io 与 awesome 徽标。
+README header adds shields.io and awesome badges.
+
+## 1.32.7
+
+README 加上 dsh.so 的风险 / 安装徽标。
+README adds dsh.so risk and install badges.
+
+## 1.32.6
+
+npm 包纳入 `assets/`，预览图在 npm 页面能显示。
+The npm package includes `assets/` so README previews render on npm.
+
 ## 1.32.5
 
 新安装的默认观感对齐作者当前这套：高度 70 固定、上下渐变 36px、下移偏置 0、左右限位 36、工具行下移 8、点击范围 200%、细腻度 100。性能监视默认仍关。
@@ -112,5 +132,5 @@ Fresh installs use the author's current look: 70px fixed height, 36px top/bottom
 矮卡不再切掉输入文字。权限/模型那一行浮在卡片上，加号和发送仍在两侧中线。长文伸进工具行时上下渐变淡出（范围可调），换行时当前行钉在卡片中线（固定和自适应都是）。工具行可上下微调；侧边按钮那一组的滑杆关掉开关也能拖。
 A short card no longer clips the input text. The access-mode / model row floats on the card; plus and send stay on the vertical midline. Long text fades at the top and bottom instead of running under the tools (fade range is adjustable). The line you are typing stays on the card midline when it wraps, in both Fixed and Auto height. The tool row can be nudged up or down; the sliders under side-button centering stay editable when that switch is off.
 
-位移图来源：https://kube.io/blog/liquid-glass-css-svg （版权归原作者，仅限个人学习使用）
-Displacement maps come from https://kube.io/blog/liquid-glass-css-svg (all rights with the original author; for personal study only).
+位移图来源：https://kube.io/blog/liquid-glass-css-svg ，版权仍归原作者，不在本插件的 Apache-2.0 范围内。详见 [NOTICE](NOTICE)。
+Displacement maps come from https://kube.io/blog/liquid-glass-css-svg. Copyright remains with the original author and is not covered by this plugin's Apache-2.0 license. See [NOTICE](NOTICE).
